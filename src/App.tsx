@@ -3,9 +3,14 @@ import { TasksPage } from './pages'
 import { observer } from 'mobx-react-lite';
 import { useTodoStore } from './hooks';
 import { Loader } from './components';
+import { useEffect } from 'react'
 
 function App() {
   const store = useTodoStore()
+
+  useEffect(()=>{
+    store.loadAllData()
+  },[])
 
   return (
     <div className="App">

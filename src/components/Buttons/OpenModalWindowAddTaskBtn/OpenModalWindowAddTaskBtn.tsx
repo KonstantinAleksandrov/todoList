@@ -1,9 +1,6 @@
 import './style.css'
 import { FC } from 'react'
-
-interface IOpenModalWindowAddTaskBtn {
-    openModalHandler: () => void
-}
+import { IOpenModalWindowAddTaskBtn } from './IOpenModalWindowAddTaskBtn'
 
 const OpenModalWindowAddTaskBtn:FC<IOpenModalWindowAddTaskBtn> = ({openModalHandler}) => {
     return (
