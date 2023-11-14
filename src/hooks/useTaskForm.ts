@@ -1,12 +1,7 @@
 import { useState } from "react";
+import { ITask } from "../types";
 
-interface ICurrentTask {
-    name: string,
-    description: string,
-    categoryName: string
-}
-
-export const useTaskForm = (currentTask: ICurrentTask) => {
+export const useTaskForm = (currentTask: ITask) => {
     const [task,setTask] = useState(currentTask)
 
     const changeName = (name: string) => {
@@ -20,4 +15,12 @@ export const useTaskForm = (currentTask: ICurrentTask) => {
             return {...prev,description}
         })
     }
+
+    const changeCategory = (id: number) => {
+        setTask((prev)=>{
+            return {...prev, categoryId: id}
+        })
+    }
+
+    return {task, changeName, changeDescription, changeCategory}
 }

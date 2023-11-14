@@ -3,10 +3,20 @@ import { ICategory } from "./ICategory"
 
 export interface ITodoStore {
     isLoading: boolean,
+    isBurgerMenuOpen: boolean,
+    changeBurgerMenuOpen: () => void
     loadTasks: () => void,
     getTasks: () => ITask[],
     getCategories: () => ICategory[]
-    loadAllData: () => void,
+    loadAllData: () => Promise<boolean>,
     loadCategories: () => void,
-    getCategoryById: (id: number) => ICategory | undefined
+    getCategoryById: (id: number) => ICategory | undefined,
+    getLastTaskId: () => number,
+    addNewTask: (task: ITask) => Promise<boolean>,
+    editTask: (task: ITask) => Promise<boolean>,
+    deleteTask: (taskId: number) => Promise<boolean>,
+    getLastCategotyId: ()=> number,
+    addNewCategory: (category: ICategory) => Promise<boolean>,
+    editCategory: (category: ICategory) => Promise<boolean>,
+    deleteCategory: (categoryId: number) => Promise<boolean>,
 }

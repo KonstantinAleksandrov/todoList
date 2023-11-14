@@ -1,7 +1,7 @@
 import './style.css'
 import CloseCrossIcon from '../../../images/icons/closeCrossIcon.svg'
 import { FC } from 'react'
-import { ICloseCrossBtn } from './ICloseCrossBtn'
+import { ICloseCrossBtn } from './CloseCrossBtnProps'
 
 const CloseCrossBtn:FC<ICloseCrossBtn> = ({closeHandler}) => {
     return (

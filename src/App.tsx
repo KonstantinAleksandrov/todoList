@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { TasksPage } from './pages'
+import { TasksPage, CategotiesPage } from './pages'
 import { observer } from 'mobx-react-lite';
 import { useTodoStore } from './hooks';
 import { Loader } from './components';
@@ -17,6 +17,7 @@ function App() {
       <div className="wrapper">
           <Routes>
             <Route path='/' element={<TasksPage/>}></Route>
+            <Route path='/categories' element={<CategotiesPage/>}></Route>
           </Routes>
           {store.isLoading && <Loader/>}
       </div>

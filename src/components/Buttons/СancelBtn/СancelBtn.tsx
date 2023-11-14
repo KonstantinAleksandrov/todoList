@@ -1,6 +1,6 @@
 import './style.css'
 import { FC } from 'react'
-import { IСancelBtnProps } from './IСancelBtnProps'
+import { IСancelBtnProps } from './СancelBtnProps'
 
 const СancelBtn:FC<IСancelBtnProps> = ({text,clickHandler}) => {
     return (

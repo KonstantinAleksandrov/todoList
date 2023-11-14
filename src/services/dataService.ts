@@ -9,9 +9,9 @@ class DataService {
             fetch(`${this.BASE_URL}GetTasks`)
               .then((response) => response.json())
               .then((result) => {
-                resolve(result);
+                resolve(result)
               })
-              .catch((err) => reject(err));
+              .catch((err) => reject(err))
           });
     }
 
@@ -19,10 +19,8 @@ class DataService {
         return new Promise((resolve, reject) => {
             fetch(`${this.BASE_URL}GetCategories`)
             .then((response) => response.json())
-            .then((result) => {
-              resolve(result);
-            })
-            .catch((err) => reject(err));
+            .then((result) => resolve(result))
+            .catch((err) => reject(err))
         })
     }
 
@@ -37,6 +35,90 @@ class DataService {
             })
         })
     }
+
+    addNewTask = <T>(task: T):Promise<T> => {
+        const raw = JSON.stringify(task)
+        return new Promise((resolve,reject)=> {
+            fetch(`${this.BASE_URL}AddTask`,{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: raw,
+            })
+            .then((response) => response.json())
+            .then((result)=> resolve(result))
+            .catch((err)=>reject(err))
+        })
+    }
+
+    editTask = <T>(task: T):Promise<T> => {
+        const raw = JSON.stringify(task)
+        return new Promise((resolve,reject)=> {
+            fetch(`${this.BASE_URL}UpdateTask`,{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: raw,
+            })
+            .then((response) => response.json())
+            .then((result)=> resolve(result))
+            .catch((err)=>reject(err))
+        })
+    }
+
+    deleteTask = <T>(taskId: T):Promise<string> => {
+        return new Promise((resolve,reject)=> {
+            fetch(`${this.BASE_URL}RemoveTask/${taskId}`)
+            .then((response) => response.text())
+            .then((response)=> resolve(response))
+            .catch((err)=>reject(err))
+        })
+    }
+
+    addNewCategory = <T>(category: T):Promise<T> => {
+        const raw = JSON.stringify(category)
+        return new Promise((resolve,reject)=> {
+            fetch(`${this.BASE_URL}AddCategory`,{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: raw,
+            })
+            .then((response) => response.json())
+            .then((result)=> resolve(result))
+            .catch((err)=>reject(err))
+        })
+    }
+
+    editCategory = <T>(category: T):Promise<T> => {
+        const raw = JSON.stringify(category)
+        return new Promise((resolve,reject)=> {
+            fetch(`${this.BASE_URL}UpdateCategory`,{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: raw,
+            })
+            .then((response) => response.json())
+            .then((result)=> resolve(result))
+            .catch((err)=>reject(err))
+        })
+    }
+
+    deleteCategory = <T>(categoryId: T):Promise<string> => {
+        return new Promise((resolve,reject)=> {
+            fetch(`${this.BASE_URL}RemoveCategory/${categoryId}`)
+            .then((response) => response.text())
+            .then((response)=> resolve(response))
+            .catch((err)=>reject(err))
+        })
+    }
 }
+
+
 
 export const dataService = new DataService()

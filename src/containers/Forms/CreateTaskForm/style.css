@@ -33,3 +33,30 @@
     flex: 0 0 112px;
     height: 46px;
 }
+
+@media screen and (max-width: 650px) {
+    .createTaskForm__title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .createTaskForm__title {
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .createTaskForm__buttons {
+        justify-content: center;
+    }
+
+    .createTaskForm__buttons .confirmBtn {
+        font-size: inherit;
+        flex: 0 0 112px;
+    }
+
+    .createTaskForm__buttons .cancelBtn {
+        font-size: inherit;
+    }
+}

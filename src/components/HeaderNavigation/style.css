@@ -23,3 +23,12 @@
 .header__nav.categories .header__nav-categories{
     color: #8FB6FF;
 }
+
+
+@media screen and (max-width: 450px) {
+    .header__nav{
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+}

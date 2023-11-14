@@ -1,20 +1,29 @@
 import './style.css'
-import { Header } from '../../components'
+import { Header,OpenModalWindowAddTaskBtn } from '../../components'
 import { useTodoStore, useOpenModal } from '../../hooks'
 import { observer } from 'mobx-react-lite'
 import { ModalWindow, Task, CreateTaskForm } from '../../containers'
+import { useEffect } from 'react'
 
 const TasksPage = () => {
     const store = useTodoStore()
-    const { openModal, openCreateModal, openEditModal, openDeleteModal } = useOpenModal()
+    const { openModal, openCreateModal} = useOpenModal()
+
+    useEffect(()=> {
+        if(store.isBurgerMenuOpen) {
+            store.changeBurgerMenuOpen()
+        }
+    },[])
 
     return (
         <div className="tasksPage">
-            <Header activePage='tasks' openModalHandler={openCreateModal}/>
+            <Header activePage='tasks'>
+                <OpenModalWindowAddTaskBtn openModalHandler={openCreateModal}/>
+            </Header>
             <ul className='tasksPage__list'>
                 {store.getTasks().map((task)=>{
                     return (
-                        <Task name={task.name} description={task.description} categoryId={task.categoryId} key={task.id}/>
+                        <Task task={task} key={task.id}/>
                     )
                 })}
             </ul>

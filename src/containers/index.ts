@@ -1,5 +1,25 @@
 import { ModalWindow } from './ModalWindow'
-import { CreateTaskForm } from './CreateTaskForm'
 import { Task } from './Task'
+import { DropDownList } from './DropDownList'
+import { 
+    EditTaskForm, 
+    DeleteTaskForm, 
+    CreateTaskForm, 
+    CreateCategoryForm, 
+    EditCategoryForm, 
+    DeleteCategoryForm 
+} from './Forms'
+import { Category } from './Category'
 
-export { ModalWindow, CreateTaskForm, Task }
+export {
+    ModalWindow, 
+    CreateTaskForm, 
+    Task, 
+    DropDownList, 
+    EditTaskForm, 
+    DeleteTaskForm, 
+    Category,
+    CreateCategoryForm, 
+    EditCategoryForm, 
+    DeleteCategoryForm 
+}

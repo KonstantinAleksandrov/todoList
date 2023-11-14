@@ -34,3 +34,9 @@
     right: 0;
     top: 0;
 }
+
+@media screen and (max-width: 650px) {
+    .input input {
+        font-size: inherit;
+    }
+}

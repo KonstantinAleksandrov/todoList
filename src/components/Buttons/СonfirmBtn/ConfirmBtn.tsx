@@ -1,6 +1,6 @@
 import './style.css'
 import { FC } from 'react'
-import { IConfirmBtnProps } from './IConfirmBtnProps'
+import { IConfirmBtnProps } from './ConfirmBtnProps'
 
 const ConfirmBtn:FC<IConfirmBtnProps> = ({text,clickHandler}) => {
     return (

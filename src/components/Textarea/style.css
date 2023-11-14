@@ -28,3 +28,9 @@
     z-index: 2;
     padding: 0 7px 0 2px;
 }
+
+@media screen and (max-width: 650px) {
+    .textarea textarea {
+        font-size: inherit;
+    }
+}

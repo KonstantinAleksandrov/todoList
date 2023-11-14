@@ -35,3 +35,14 @@
     top: 24px;
     right: 24px;
 }
+
+@media screen and (max-width: 450px) {
+    .modal__content {
+        padding: 24px 16px 16px 16px;
+    }
+
+    .modal__content .closeCrossBtn {
+        top: 24px;
+        right: 16px;
+    }
+}

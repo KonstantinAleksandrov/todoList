@@ -2,10 +2,20 @@ import { Header } from "./Header";
 import { TodoStoreProvider } from "./TodoStoreProvider";
 import { HeaderNavigation } from './HeaderNavigation'
 import { Loader } from "./Loader";
-import { OpenModalWindowAddTaskBtn, CloseCrossBtn, ConfirmBtn, СancelBtn } from './Buttons'
 import { Input } from './Input'
-import { Dropdown } from './Dropdown'
 import { Textarea } from "./Textarea"
+import { 
+    OpenModalWindowAddTaskBtn, 
+    CloseCrossBtn, 
+    ConfirmBtn, 
+    СancelBtn, 
+    OpenModalWindowEditTaskBtn,
+    OpenModalWindowDeleteTaskBtn,
+    OpenModalWindowAddCategoryBtn,
+    OpenModalWindowDeleteСategoryBtn,
+    OpenModalWindowEditCategoryBtn,
+    BurgerBtn
+} from './Buttons'
 
 export { 
     Header, 
@@ -15,8 +25,13 @@ export {
     OpenModalWindowAddTaskBtn, 
     CloseCrossBtn, 
     Input, 
-    Dropdown, 
     Textarea,
     ConfirmBtn,
-    СancelBtn 
+    СancelBtn,
+    OpenModalWindowEditTaskBtn,
+    OpenModalWindowDeleteTaskBtn,
+    OpenModalWindowAddCategoryBtn,
+    OpenModalWindowDeleteСategoryBtn ,
+    OpenModalWindowEditCategoryBtn,
+    BurgerBtn
 }

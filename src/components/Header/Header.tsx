@@ -1,21 +1,27 @@
 import './style.css'
-import { FC } from 'react'
+import { FC, PropsWithChildren } from 'react'
 import { HeaderNavigation } from '../HeaderNavigation'
-import { OpenModalWindowAddTaskBtn } from '../Buttons'
+import { useTodoStore } from '../../hooks'
+import { BurgerBtn } from '../Buttons'
+import { observer } from 'mobx-react-lite'
 
-interface IHeader{
+interface IHeaderProps{
     activePage: 'tasks' | 'categories'
-    openModalHandler: () => void
 }
 
-const Header:FC<IHeader> = ({activePage, openModalHandler}) => {
+const Header:FC<PropsWithChildren<IHeaderProps>> = ({activePage, children}) => {
+    const store = useTodoStore()
+
     return (
-        <header className="header">
+        <header className={`header ${store.isBurgerMenuOpen ? 'burgerOpened' : ''}`}>
             <div className='header__title'>ToDo List</div>
-            <HeaderNavigation activePage={activePage}/>
-            <OpenModalWindowAddTaskBtn openModalHandler={openModalHandler}/>
+            <div className='header__burgerMenu'>
+                <HeaderNavigation activePage={activePage}/>
+                {children}
+            </div>
+            <BurgerBtn openCloseHandler={store.changeBurgerMenuOpen.bind(store)}/>
         </header>
     )
 }
 
-export default Header
+export default observer(Header)
