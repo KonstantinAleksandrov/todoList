@@ -1,6 +1,6 @@
 
 import './style.css'
-import { Input, Textarea, ConfirmBtn, СancelBtn } from '../../../components'
+import { Input, Textarea, ConfirmBtn, СancelBtn, NonValidName } from '../../../components'
 import { DropDownList } from '../../DropDownList'
 import { IEditTaskFormProps } from './EditTaskFormProps'
 import { FC } from 'react'
@@ -9,7 +9,7 @@ import { observer } from 'mobx-react-lite'
 
 const EditTaskForm:FC<IEditTaskFormProps> = ({taskData, openModalHandler}) => {
     const store = useTodoStore()
-    const {task, changeName, changeDescription, changeCategory} = useTaskForm({...taskData})
+    const {task, changeName, changeDescription, changeCategory, taskNameValid, changeTouched} = useTaskForm({...taskData})
 
     const changeInputHandler = (e: React.ChangeEvent) => {
         const input = e.target as HTMLInputElement
@@ -22,6 +22,9 @@ const EditTaskForm:FC<IEditTaskFormProps> = ({taskData, openModalHandler}) => {
     }
 
     const submitFormData = () => {
+        if(!taskNameValid) {
+            return
+        }
         store.editTask(task)
         openModalHandler()
     }
@@ -30,12 +33,16 @@ const EditTaskForm:FC<IEditTaskFormProps> = ({taskData, openModalHandler}) => {
         <div className='editTaskForm'>
             <div className='editTaskForm__title'>Редактирование задачи</div>
             <div className='editTaskForm__body'>
-                <Input
-                    changeHandler={changeInputHandler}
-                    placeholder='Введите имя задачи'
-                    maxLength={255}
-                    value={task.name}
-                />
+                <div className='editTaskForm__body-input'>
+                    <Input
+                        changeHandler={changeInputHandler}
+                        placeholder='Введите имя задачи'
+                        maxLength={255}
+                        value={task.name}
+                        changeTouched={changeTouched}
+                    />
+                    {!taskNameValid && <NonValidName message='Имя задачи не может быть пустым'/>}
+                </div>
                 <DropDownList 
                 changeHandler={changeCategory} 
                 activeCategory={store.getCategoryById(taskData.categoryId)}

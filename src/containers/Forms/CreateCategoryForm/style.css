@@ -14,10 +14,6 @@
     margin-bottom: 24px;
 }
 
-.createCategoryForm__body .input {
-    grid-area: 1/1/2/3;
-}
-
 .createCategoryForm__body .textarea {
     grid-area: 2/1/3/3;
 }
@@ -37,6 +33,10 @@
 .createCategoryForm__buttons .cancelBtn {
     flex: 0 0 112px;
     height: 46px;
+}
+
+.createCategoryForm__body-input {
+    grid-area: 1/1/2/3;
 }
 
 @media screen and (max-width: 650px) {

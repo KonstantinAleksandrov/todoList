@@ -13,7 +13,7 @@ const DeleteCategoryForm:FC<IDeleteCategoryFormProps> = ({categoryId,categoryNam
 
     return (
         <div className="deleteCategoryForm">
-            <div className='deleteCategoryForm__title'>Удаление задачи</div>
+            <div className='deleteCategoryForm__title'>Удаление категории</div>
             <div className='deleteCategoryForm__text'>
                 {`Вы уверены, что хотите удалить категорию “${categoryName}”?`}
             </div>

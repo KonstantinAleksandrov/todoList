@@ -2,5 +2,6 @@ export interface IInputProps {
     placeholder: string,
     maxLength: number
     changeHandler: (e: React.ChangeEvent) => void,
-    value: string
+    value: string,
+    changeTouched: () => void
 }

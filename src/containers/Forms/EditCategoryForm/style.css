@@ -15,7 +15,7 @@
     margin-bottom: 24px;
 }
 
-.editCategoryForm__body .input {
+.editCategoryForm__body-input {
     grid-area: 1/1/2/3;
 }
 

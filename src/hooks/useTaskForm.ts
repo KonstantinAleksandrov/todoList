@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { ITask } from "../types";
 
 export const useTaskForm = (currentTask: ITask) => {
     const [task,setTask] = useState(currentTask)
+    const [taskNameValid,setTaskNameValid] = useState(true)
+    const [touched,setTouched] = useState(false)
+
+    useEffect(()=>{
+        if(!task.name && touched) {
+            setTaskNameValid(false)
+        }else {
+            setTaskNameValid(true)
+        }
+    },[task.name])
 
     const changeName = (name: string) => {
         setTask((prev)=>{
@@ -22,5 +32,9 @@ export const useTaskForm = (currentTask: ITask) => {
         })
     }
 
-    return {task, changeName, changeDescription, changeCategory}
+    const changeTouched = () => {
+        setTouched(true)
+    }
+
+    return { task, changeName, changeDescription, changeCategory, taskNameValid, changeTouched }
 }

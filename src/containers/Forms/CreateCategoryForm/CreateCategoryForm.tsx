@@ -1,13 +1,13 @@
 import './style.css'
 import { ICreateCategoryFormProps } from './CreateCategoryFormProps'
 import { FC } from 'react'
-import { Input, Textarea, ConfirmBtn, СancelBtn } from '../../../components'
+import { Input, Textarea, ConfirmBtn, СancelBtn, NonValidName } from '../../../components'
 import { useCategoryForm, useTodoStore } from '../../../hooks'
 import { observer } from 'mobx-react-lite'
 
 const CreateCategoryForm:FC<ICreateCategoryFormProps> = ({openModalHandler}) => {
     const store = useTodoStore()
-    const { category, changeName, changeDescription } = useCategoryForm(
+    const { category, changeName, changeDescription, categoryNameValid, changeTouched } = useCategoryForm(
         {
             name: '', 
             description: '',
@@ -26,6 +26,9 @@ const CreateCategoryForm:FC<ICreateCategoryFormProps> = ({openModalHandler}) => 
     }
 
     const submitFormData = () => {
+        if(!categoryNameValid) {
+            return
+        }
         store.addNewCategory(category)
         openModalHandler()
         if(store.isBurgerMenuOpen) {
@@ -37,12 +40,16 @@ const CreateCategoryForm:FC<ICreateCategoryFormProps> = ({openModalHandler}) => 
         <div className="createCategoryForm">
             <div className='createCategoryForm__title'>Создание категории</div>
             <div className='createCategoryForm__body'>
-                <Input
-                    changeHandler={changeInputHandler}
-                    placeholder='Введите имя категории'
-                    maxLength={255}
-                    value={category.name}
-                />
+                <div className='createCategoryForm__body-input'>
+                    <Input
+                        changeHandler={changeInputHandler}
+                        placeholder='Введите имя категории'
+                        maxLength={255}
+                        value={category.name}
+                        changeTouched={changeTouched}
+                    />
+                    {!categoryNameValid && <NonValidName message='Имя категории не может быть пустым'/>}
+                </div>
                 <Textarea
                     changeHandler={changeTextAreaHandler}
                     placeholder='Введите описание категории'

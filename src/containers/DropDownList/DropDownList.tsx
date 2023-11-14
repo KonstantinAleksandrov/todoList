@@ -3,6 +3,7 @@ import listOpenIcon from '../../images/icons/listOpenIcon.svg'
 import { useTodoStore } from '../../hooks'
 import { IDropDownListProps } from './IDropDownListProps'
 import { FC } from 'react'
+import { trimLine } from '../../utils'
 
 const DropDownList: FC<IDropDownListProps> = ({changeHandler,activeCategory}) => {
     const store = useTodoStore()
@@ -36,7 +37,7 @@ const DropDownList: FC<IDropDownListProps> = ({changeHandler,activeCategory}) =>
                         <option 
                         value={category.id} 
                         className="dropdown__option" 
-                        key={category.id}>{category.name}</option>
+                        key={category.id}>{category.name.length > 15? trimLine(category.name) : category.name}</option>
                     )
                 })}
             </select>

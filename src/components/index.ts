@@ -4,6 +4,7 @@ import { HeaderNavigation } from './HeaderNavigation'
 import { Loader } from "./Loader";
 import { Input } from './Input'
 import { Textarea } from "./Textarea"
+import { NonValidName } from './NonValidName'
 import { 
     OpenModalWindowAddTaskBtn, 
     CloseCrossBtn, 
@@ -33,5 +34,6 @@ export {
     OpenModalWindowAddCategoryBtn,
     OpenModalWindowDeleteСategoryBtn ,
     OpenModalWindowEditCategoryBtn,
-    BurgerBtn
+    BurgerBtn,
+    NonValidName
 }
