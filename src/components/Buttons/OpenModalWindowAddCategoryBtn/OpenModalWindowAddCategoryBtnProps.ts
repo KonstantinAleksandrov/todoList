@@ -1,3 +1,3 @@
 export interface IOpenModalWindowAddCategoryBtn {
-	openModalHandler: () => void;
+  openModalHandler: () => void;
 }

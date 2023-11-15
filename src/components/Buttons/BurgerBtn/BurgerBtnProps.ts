@@ -1,3 +1,3 @@
 export interface IBurgerBtnProps {
-	openCloseHandler: () => void;
+  openCloseHandler: () => void;
 }

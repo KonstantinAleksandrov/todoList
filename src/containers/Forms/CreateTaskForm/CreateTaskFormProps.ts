@@ -1,3 +1,3 @@
 export interface ICreateTaskFormProps {
-	openModalHandler: () => void;
+  openModalHandler: () => void;
 }

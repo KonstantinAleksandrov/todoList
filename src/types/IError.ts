@@ -1,4 +1,4 @@
 export interface IError {
-	isError: boolean;
-	errorMessage: string;
+  isError: boolean;
+  errorMessage: string;
 }

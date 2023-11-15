@@ -1,3 +1,3 @@
 export interface ICreateCategoryFormProps {
-	openModalHandler: () => void;
+  openModalHandler: () => void;
 }

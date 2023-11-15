@@ -10,14 +10,14 @@ import { OpenModalWindowEditCategoryBtn } from './OpenModalWindowEditCategoryBtn
 import { BurgerBtn } from './BurgerBtn';
 
 export {
-	OpenModalWindowAddTaskBtn,
-	CloseCrossBtn,
-	ConfirmBtn,
-	СancelBtn,
-	OpenModalWindowEditTaskBtn,
-	OpenModalWindowDeleteTaskBtn,
-	OpenModalWindowAddCategoryBtn,
-	OpenModalWindowDeleteСategoryBtn,
-	OpenModalWindowEditCategoryBtn,
-	BurgerBtn,
+  OpenModalWindowAddTaskBtn,
+  CloseCrossBtn,
+  ConfirmBtn,
+  СancelBtn,
+  OpenModalWindowEditTaskBtn,
+  OpenModalWindowDeleteTaskBtn,
+  OpenModalWindowAddCategoryBtn,
+  OpenModalWindowDeleteСategoryBtn,
+  OpenModalWindowEditCategoryBtn,
+  BurgerBtn,
 };

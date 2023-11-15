@@ -1,3 +1,3 @@
 export interface ICloseCrossBtn {
-	closeHandler: () => void;
+  closeHandler: () => void;
 }
