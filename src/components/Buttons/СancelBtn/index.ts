@@ -1,1 +1,1 @@
-export { default as СancelBtn } from './СancelBtn'
+export { default as СancelBtn } from './СancelBtn';

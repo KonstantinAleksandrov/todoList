@@ -1,4 +1,4 @@
 export interface IConfirmBtnProps {
-    text: string,
-    clickHandler: () => void
+	text: string;
+	clickHandler: () => void;
 }

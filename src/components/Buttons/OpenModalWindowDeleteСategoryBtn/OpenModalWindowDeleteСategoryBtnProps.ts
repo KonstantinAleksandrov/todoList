@@ -1,3 +1,3 @@
 export interface IOpenModalWindowDeleteCategoryBtn {
-    openModalHandler: () => void
+	openModalHandler: () => void;
 }

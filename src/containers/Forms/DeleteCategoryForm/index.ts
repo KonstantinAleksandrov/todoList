@@ -1,1 +1,1 @@
-export { default as DeleteCategoryForm } from './DeleteCategoryForm'
+export { default as DeleteCategoryForm } from './DeleteCategoryForm';

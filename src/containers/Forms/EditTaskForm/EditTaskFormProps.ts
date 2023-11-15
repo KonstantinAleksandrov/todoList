@@ -1,6 +1,6 @@
-import { ITask } from "../../../types"
+import { ITask } from '../../../types';
 
-export interface IEditTaskFormProps{
-    taskData: ITask,
-    openModalHandler: () => void
+export interface IEditTaskFormProps {
+	taskData: ITask;
+	openModalHandler: () => void;
 }

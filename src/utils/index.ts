@@ -1,1 +1,1 @@
-export { trimLine } from "./commonUtils";
+export { trimLine } from './commonUtils';

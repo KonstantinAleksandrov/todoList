@@ -1,3 +1,3 @@
 export interface INonValidNameProps {
-    message: string
+	message: string;
 }

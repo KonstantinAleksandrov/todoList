@@ -1,3 +1,3 @@
 export interface IOpenModalWindowAddTaskBtn {
-    openModalHandler: () => void
+	openModalHandler: () => void;
 }

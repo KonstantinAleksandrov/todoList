@@ -1,5 +1,5 @@
 export interface IDeleteTaskFormProps {
-    taskName: string,
-    taskId: number,
-    openModalHandler: () => void
+	taskName: string;
+	taskId: number;
+	openModalHandler: () => void;
 }

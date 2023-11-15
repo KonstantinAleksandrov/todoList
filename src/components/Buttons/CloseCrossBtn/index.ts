@@ -1,1 +1,1 @@
-export { default as CloseCrossBtn } from './CloseCrossBtn'
+export { default as CloseCrossBtn } from './CloseCrossBtn';

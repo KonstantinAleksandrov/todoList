@@ -1,6 +1,6 @@
-import { ICategory } from "../../../types"
+import { ICategory } from '../../../types';
 
-export interface IEditCategoryFormProps{
-    categoryData: ICategory,
-    openModalHandler: () => void
+export interface IEditCategoryFormProps {
+	categoryData: ICategory;
+	openModalHandler: () => void;
 }

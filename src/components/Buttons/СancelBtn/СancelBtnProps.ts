@@ -1,4 +1,4 @@
 export interface IСancelBtnProps {
-    text: string,
-    clickHandler: () => void
+	text: string;
+	clickHandler: () => void;
 }

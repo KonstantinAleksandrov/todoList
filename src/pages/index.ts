@@ -1,4 +1,5 @@
-import { TasksPage } from "./TasksPage";
-import { CategotiesPage } from './CategotiesPage'
+import { TasksPage } from './TasksPage';
+import { CategotiesPage } from './CategotiesPage';
+import { ErrorPage } from './ErrorPage';
 
-export { TasksPage, CategotiesPage }
+export { TasksPage, CategotiesPage, ErrorPage };

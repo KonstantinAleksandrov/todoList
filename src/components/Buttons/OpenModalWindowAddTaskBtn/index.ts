@@ -1,1 +1,1 @@
-export { default as OpenModalWindowAddTaskBtn } from './OpenModalWindowAddTaskBtn'
+export { default as OpenModalWindowAddTaskBtn } from './OpenModalWindowAddTaskBtn';

@@ -1,1 +1,1 @@
-export { default as OpenModalWindowDeleteСategoryBtn } from './OpenModalWindowDeleteСategoryBtn'
+export { default as OpenModalWindowDeleteСategoryBtn } from './OpenModalWindowDeleteСategoryBtn';

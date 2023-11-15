@@ -1,1 +1,1 @@
-export { default as BurgerBtn } from './BurgerBtn'
+export { default as BurgerBtn } from './BurgerBtn';

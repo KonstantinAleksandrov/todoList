@@ -1,1 +1,1 @@
-export { default as OpenModalWindowEditCategoryBtn } from './OpenModalWindowEditCategoryBtn'
+export { default as OpenModalWindowEditCategoryBtn } from './OpenModalWindowEditCategoryBtn';

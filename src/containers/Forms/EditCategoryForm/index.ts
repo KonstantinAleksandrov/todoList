@@ -1,1 +1,1 @@
-export { default as EditCategoryForm } from './EditCategoryForm'
+export { default as EditCategoryForm } from './EditCategoryForm';

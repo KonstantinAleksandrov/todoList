@@ -1,1 +1,1 @@
-export { default as NonValidName } from './NonValidName'
+export { default as NonValidName } from './NonValidName';

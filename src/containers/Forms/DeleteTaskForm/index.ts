@@ -1,1 +1,1 @@
-export { default as DeleteTaskForm } from './DeleteTaskForm'
+export { default as DeleteTaskForm } from './DeleteTaskForm';

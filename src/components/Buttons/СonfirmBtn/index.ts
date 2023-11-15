@@ -1,1 +1,1 @@
-export {default as ConfirmBtn} from './ConfirmBtn'
+export { default as ConfirmBtn } from './ConfirmBtn';

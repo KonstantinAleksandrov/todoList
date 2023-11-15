@@ -1,1 +1,1 @@
-export { default as CategotiesPage } from './CategotiesPage'
+export { default as CategotiesPage } from './CategotiesPage';
